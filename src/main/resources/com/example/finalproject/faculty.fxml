@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.FacultyController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Welcome to Faculty Management!" />
+
+    <TableView fx:id="eventTable" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="colRequester" prefWidth="100" text="Requester" />
+            <TableColumn fx:id="colStatus" prefWidth="100" text="Status" />
+            <TableColumn fx:id="colStart" prefWidth="100" text="Start Time" />
+            <TableColumn fx:id="colEnd" prefWidth="100" text="End Time" />
+            <TableColumn fx:id="colDate" prefWidth="100" text="Date" /> <!-- New column -->
+        </columns>
+    </TableView>
+
+    <Button fx:id="approveButton" text="Approve Selected Event" />
+    <Button fx:id="denyButton" text="Deny Selected Event" />
+   <Button fx:id="printOut" mnemonicParsing="false" onAction="#processEvents" text="print" />
+</VBox>
